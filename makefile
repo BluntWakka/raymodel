@@ -1,10 +1,8 @@
-CFLAGS=-g -Wall -Wextra -Wwrite-strings
-LFLAGS=-g
+CFLAGS=`pkg-config --cflags sdl2`
+LFLAGS=`pkg-config --libs sdl2`
 
-raymodel: raymodel.o
-	g++ ${LFLAGS} -o raymodel raymodel.o
-raymodel.o: raymodel.cpp raymodel.h 
-	g++ ${CFLAGS} -c raymodel.cpp
+raymodel: 
+	g++ raymodel.cpp ${CFLAGS} -o raymodel ${LFLAGS}
 clean:
 	rm -f *.o
 	rm -f raymodel
