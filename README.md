@@ -6,3 +6,5 @@ meaning that you will need to execute in an environment that provides this resou
 
 When running on command line, there is one extra option to chnge the "stopper" body to a strangley shaped one (oblong).
 To change to the strange shape, simply add the charatcer 's' when executing as an argument.
+
+.h file is for documentation of function usage but is not used in the compilation process.
